@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community Pulse · Mar 16 – 22, 2026</title>
+  <title>Community Pulse · Mar 23 – 29, 2026</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -42,12 +42,36 @@
 
     <!-- Title + byline -->
     <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-      <h1 class="font-serif text-5xl text-ink leading-none tracking-tight">Community<br/>Pulse</h1>
+      <div>
+        <h1 class="font-serif text-5xl text-ink leading-none tracking-tight">Community<br/>Pulse</h1>
+        <p id="tagline"
+           class="mt-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-teal"
+           style="transition: opacity 0.5s ease;">Built in Lisbon · Q1 2026</p>
+      </div>
       <div class="text-right leading-snug">
         <p class="text-sm font-semibold text-ink">Christina Waterman</p>
-        <p class="text-sm text-stone-500">Week of Mar 16 – 22, 2026</p>
+        <p class="text-sm text-stone-500">Week of Mar 23 – 29, 2026</p>
       </div>
     </div>
+    <script>
+      (function () {
+        var phrases = [
+          "Built in Lisbon · Q1 2026",
+          "Algomarketing Centre of Evolution",
+          "Community & Workforce Development"
+        ];
+        var idx = 0;
+        var el = document.getElementById('tagline');
+        setInterval(function () {
+          el.style.opacity = '0';
+          setTimeout(function () {
+            idx = (idx + 1) % phrases.length;
+            el.textContent = phrases[idx];
+            el.style.opacity = '1';
+          }, 500);
+        }, 3000);
+      })();
+    </script>
 
     <!-- Editor's note -->
     
@@ -60,158 +84,197 @@
     <div class="mt-8 h-px bg-stone-300"></div>
   </header>
 
-  <main class="max-w-2xl mx-auto px-6 pb-16 space-y-16">
+  <main class="max-w-2xl mx-auto px-6 pb-20">
 
     <!-- ── Community Engagement Score ───────────────────────────────────────── -->
-    <section class="text-center pt-4">
-      <p class="text-[10px] font-semibold uppercase tracking-[0.25em] text-stone-400 mb-6">
-        Community Engagement Score
+    <section class="text-center py-16">
+      <p class="text-[10px] font-semibold uppercase tracking-[0.25em] text-stone-400 mb-8">
+        Community Pulse Score
       </p>
 
       <!-- The number — magazine cover style -->
       <div class="flex items-start justify-center gap-2">
-        <span class="font-serif leading-none text-teal" style="font-size: clamp(6rem, 20vw, 10rem);">78</span>
+        <span class="font-serif leading-none text-teal" style="font-size: clamp(6rem, 20vw, 10rem);">77</span>
         <div class="pt-5 text-left">
           <span class="text-xl text-stone-300 font-light">/100</span>
           <div class="mt-2">
             
-            <span class="text-sm font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">↑ 28 pts</span>
+            <span class="text-sm text-stone-400">Week 1 baseline</span>
             
           </div>
         </div>
       </div>
 
       <!-- Score breakdown — minimal stat row -->
-      <div class="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-3 text-xs text-stone-400">
-        <span>Tasks &nbsp;<strong class="text-ink font-semibold">25.0/30</strong></span>
+      <div class="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-3 text-xs text-stone-400">
+        <span>Community Impact &nbsp;<strong class="text-ink font-semibold">30.0/40</strong></span>
         <span class="text-stone-300">·</span>
-        <span>Activities &nbsp;<strong class="text-ink font-semibold">18.8/25</strong></span>
+        <span>Program Delivery &nbsp;<strong class="text-ink font-semibold">29.2/35</strong></span>
         <span class="text-stone-300">·</span>
-        <span>Focus &nbsp;<strong class="text-ink font-semibold">17.8/20</strong></span>
-        <span class="text-stone-300">·</span>
-        <span>Proactive &nbsp;<strong class="text-ink font-semibold">12.3/15</strong></span>
-        <span class="text-stone-300">·</span>
-        <span class="text-rose-400">Penalty &nbsp;<strong>-4</strong></span>
+        <span>Strategic Focus &nbsp;<strong class="text-ink font-semibold">18.0/25</strong></span>
       </div>
 
-      <!-- Task tally, human-language -->
-      <p class="mt-4 text-xs text-stone-400">
-        5 of 6 planned tasks completed this week
+      <!-- Score description -->
+      <p class="mt-6 text-xs text-stone-400 max-w-md mx-auto leading-relaxed">
+        A weekly index measuring community impact (events and activations), program delivery (tasks completed), and strategic focus (time spent on what matters most) — tracked over time.
       </p>
     </section>
 
-    <!-- ── What We Built This Week ───────────────────────────────────────────── -->
-    <section>
-      <div class="flex items-baseline gap-3 mb-6">
-        <h2 class="font-serif text-3xl text-ink">What We Built This Week</h2>
+    <!-- ── What We Built ─────────────────────────────────────────────────── -->
+    <section class="border-t border-stone-200 pt-14 pb-4">
+      <div class="flex items-baseline gap-3 mb-2">
+        <h2 class="font-serif text-4xl text-ink">What We Built</h2>
+        <div class="h-px flex-1 bg-stone-200 mt-1"></div>
+      </div>
+      
+      <p class="text-xs italic text-stone-400 mb-8">Q1 retrospective · pulled from delivery records</p>
+      
+
+      
+      <div class="space-y-5">
+        
+        
+        <div class="pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
+          
+          <h3 class="font-serif text-2xl text-teal leading-tight mb-2">Evolved Worker Program</h3>
+          <p class="text-stone-600 leading-relaxed text-[15px]">GenAI certification is at 76% adoption across the CoE — Study Groups and Focus Groups are live in early stages, with curriculum and L&amp;D approach drafted as a shared initiative with the Innovation team.</p>
+          
+        </div>
+        
+        
+        <div class="pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
+          
+          <h3 class="font-serif text-2xl text-teal leading-tight mb-2">Algo Community Experience</h3>
+          <p class="text-stone-600 leading-relaxed text-[15px]">Moved Innovation Sessions to Thursdays, invited leadership, and increased attendance by 75% — Post-Shift Drinks became self-organizing this quarter, with Algos now hosting independently without facilitation.</p>
+          
+        </div>
+        
+        
+        <div class="pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
+          
+          <h3 class="font-serif text-2xl text-teal leading-tight mb-2">Building the CoE</h3>
+          <p class="text-stone-600 leading-relaxed text-[15px]">Selected office design and snack partners at 50-60% under initial budget — IT/office management handover to FinOps &amp; PeopleOps is complete, including IT FAQ, issues tracker, and vendor accounts.</p>
+          
+        </div>
+        
+        
+        <div class="pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
+          
+          <h3 class="font-serif text-2xl text-teal leading-tight mb-2">External Community &amp; Brand</h3>
+          <p class="text-stone-600 leading-relaxed text-[15px]">Delivered four external events this quarter — Lovable Hackathon, IDEA Networking Breakfast, XPAT Student Event, and AI Unicorn Factory. External community membership strategy and application framework is drafted and ready to propose.</p>
+          
+        </div>
+        
+        
+        <div class="pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
+          
+          <h3 class="font-serif text-2xl text-teal leading-tight mb-2">Strategic Partnerships &amp; BD</h3>
+          <p class="text-stone-600 leading-relaxed text-[15px]">Developed external community value proposition and began outreach for event partnerships — now looped into the Harmon x Algomarketing partnership with Lisbon execution expected in Q2.</p>
+          
+        </div>
+        
+      </div>
+      
+
+      <!-- Weekly Wins & Key Actions -->
+      
+      <div class="mt-12">
+        <div class="flex items-baseline gap-3 mb-4">
+          <h3 class="font-serif text-3xl text-ink">Weekly Wins &amp; Key Actions</h3>
+          <div class="h-px flex-1 bg-stone-200 mt-1"></div>
+        </div>
+        <ul class="space-y-2">
+          
+          <li>
+            <a href="https://calendar.google.com/calendar/u/0?cid=Y183OTY4NDBiMTA2MzI1NWQzMDBhZDc2NWQ2YWQyMTg1YWYzMWZkMzhkOWNhOWViOTAyMDMzYjVkZTk4Yzg3MTdkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener"
+               class="text-teal font-medium hover:underline text-[15px]">→ EW Community Calendar</a>
+          </li>
+          
+          <li>
+            <a href="https://drive.google.com/file/d/1kyETRYD1BUvOJ96k45s2heAoZD_q6aQj/view?usp=sharing" target="_blank" rel="noopener"
+               class="text-teal font-medium hover:underline text-[15px]">→ External Community Vision</a>
+          </li>
+          
+          <li>
+            <a href="https://www.linkedin.com/posts/ideaspaces_communitymanager-algomarketing-idea-activity-7439368983029370880-bgZ3" target="_blank" rel="noopener"
+               class="text-teal font-medium hover:underline text-[15px]">→ Strategic Community Partnerships</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      <!-- Expanding Influence -->
+      
+      <div class="mt-14">
+        <p class="text-[10px] uppercase tracking-[0.2em] text-stone-400 mb-6">Expanding Influence</p>
+        <ol class="space-y-5">
+          
+          <li class="flex items-start gap-5">
+            <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">1</span>
+            <span class="text-stone-600 leading-relaxed text-[15px]">Absorbed IT coordination and office management for the Lisbon team during CoE setup — fully handed over to FinOps &amp; PeopleOps.</span>
+          </li>
+          
+          <li class="flex items-start gap-5">
+            <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">2</span>
+            <span class="text-stone-600 leading-relaxed text-[15px]">Looped into the Harmon x Algomarketing PR partnership, with Lisbon events execution expected in Q2.</span>
+          </li>
+          
+        </ol>
+      </div>
+      
+    </section>
+
+    <!-- ── What I Need ───────────────────────────────────────────────────── -->
+    <section class="border-t border-stone-200 pt-14 pb-4 mt-14">
+      <div class="flex items-baseline gap-3 mb-8">
+        <h2 class="font-serif text-4xl text-ink">What I Need</h2>
         <div class="h-px flex-1 bg-stone-200 mt-1"></div>
       </div>
 
       
-      <ul class="space-y-4">
+      <ol class="space-y-5">
         
-        <li class="flex items-start gap-3 text-stone-700 leading-relaxed">
-          <span class="mt-2 w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span>
-          <span>Evolved Worker Program: Mapped the full EW curriculum journey and designed the L&amp;D certification pitch with cost framework — GenAI certification is now at 75% adoption across the CoE, with Study Groups launched using certified Algos as peer mentors.</span>
+        <li class="flex items-start gap-5">
+          <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">1</span>
+          <span class="text-stone-600 leading-relaxed text-[15px]">A formal introduction to the broader Algomarketing organization — the community work is ready for wider visibility.</span>
         </li>
         
-        <li class="flex items-start gap-3 text-stone-700 leading-relaxed">
-          <span class="mt-2 w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span>
-          <span>Algo Community Experience: Moved Innovation Sessions to Thursdays, invited leadership, and increased attendance by 75% — Post-Shift Drinks became self-organizing this quarter, with Algos now hosting independently without facilitation.</span>
+        <li class="flex items-start gap-5">
+          <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">2</span>
+          <span class="text-stone-600 leading-relaxed text-[15px]">External community brand identity alignment — a direction decision unlocks the next phase of the external community launch.</span>
         </li>
         
-        <li class="flex items-start gap-3 text-stone-700 leading-relaxed">
-          <span class="mt-2 w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span>
-          <span>Building the CoE: Selected office design partner at 60% under initial budget and completed handover of IT/office management to FinOps &amp; PeopleOps — including IT FAQ, issues tracker, and vendor accounts.</span>
-        </li>
-        
-        <li class="flex items-start gap-3 text-stone-700 leading-relaxed">
-          <span class="mt-2 w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span>
-          <span>External Community &amp; Brand: Engaged at four external events this quarter including the Lovable Hackathon, IDEA Networking Breakfast, XPAT Student Event, and AI Unicorn Factory — membership strategy and application framework for The Evolved is now designed and ready to launch.</span>
-        </li>
-        
-        <li class="flex items-start gap-3 text-stone-700 leading-relaxed">
-          <span class="mt-2 w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span>
-          <span>Strategic Partnerships &amp; BD: Developed external community value proposition and began outreach for event partnerships — now looped into the Harmon x Algomarketing partnership with Lisbon execution expected in Q2.</span>
-        </li>
-        
-      </ul>
+      </ol>
       
     </section>
 
     <!-- ── The Room's Energy ────────────────────────────────────────────────── -->
-    <section>
+    <section class="border-t border-stone-200 pt-14 mt-14">
       <div class="flex items-baseline gap-3 mb-6">
-        <h2 class="font-serif text-3xl text-ink">The Room's Energy</h2>
+        <h2 class="font-serif text-4xl text-ink">The Room's Energy</h2>
         <div class="h-px flex-1 bg-stone-200 mt-1"></div>
       </div>
 
-      <p class="text-stone-700 leading-relaxed text-base max-w-xl">The most telling sign this quarter wasn&#39;t an attendance number — it was watching community members start hosting their own gatherings without being asked. Post-Shift Drinks went from a managed event to something people claimed as their own. The Innovation Sessions followed the same arc: moving to Thursdays, inviting leadership, team inputs to structure, and doubling attendance shifted to a collaborative ownership over the learning agenda. Senior leadership visits from Yomi, Dele, Lola, and Gillian weren&#39;t just check-ins — each one was a designed experience, and the feedback reflected that.The room&#39;s energy this week is focused and forward-looking — Q2 planning is live, the Evolved Worker curriculum has a shape, and the team knows what&#39;s coming next.</p>
-    </section>
-
-    <!-- ── Where I'm Being Pulled ────────────────────────────────────────────── -->
-    <section>
-      <div class="flex items-baseline gap-3 mb-2">
-        <h2 class="font-serif text-3xl text-ink">Scope Evolution</h2>
-        <div class="h-px flex-1 bg-stone-200 mt-1"></div>
-      </div>
-      <p class="text-[10px] uppercase tracking-[0.2em] text-stone-400 mb-7">Opportunity signals · expanding influence</p>
-
-      
-      <ol class="space-y-5">
-        
-        <li class="flex items-start gap-5">
-          <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">1</span>
-          <span class="text-stone-700 leading-relaxed">Led full CoE office design from vendor sourcing to partner selection — a facilities and procurement initiative absorbed into community scope as the operational anchor of the CoE launch</span>
-        </li>
-        
-        <li class="flex items-start gap-5">
-          <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">2</span>
-          <span class="text-stone-700 leading-relaxed">Became the de facto IT coordinator/office manager for the Lisbon team, creating the FAQ, managing the issues tracker strategy, and directing Algos on support protocols — now formally handed over to FinOps &amp; PeopleOps</span>
-        </li>
-        
-        <li class="flex items-start gap-5">
-          <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">3</span>
-          <span class="text-stone-700 leading-relaxed">Looped into the Harmon x Algomarketing PR partnership — supporting the client acquisition events remotely in preparation for leading Lisbon events execution</span>
-        </li>
-        
-      </ol>
-      
-    </section>
-
-    <!-- ── What I Need to Move Faster ──────────────────────────────────────── -->
-    <section>
-      <div class="flex items-baseline gap-3 mb-2">
-        <h2 class="font-serif text-3xl text-ink">What I Need to Move Faster</h2>
-        <div class="h-px flex-1 bg-stone-200 mt-1"></div>
-      </div>
-      <p class="text-[10px] uppercase tracking-[0.2em] text-stone-400 mb-7">Resolved, these accelerate everything</p>
-
-      
-      <ol class="space-y-5">
-        
-        <li class="flex items-start gap-5">
-          <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">1</span>
-          <span class="text-stone-700 leading-relaxed">Formal introduction to the broader Algomarketing organization — visibility gaps are slowing community foundations work</span>
-        </li>
-        
-        <li class="flex items-start gap-5">
-          <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">2</span>
-          <span class="text-stone-700 leading-relaxed">External community brand identity alignment — sense check on direction will unlock tri-dimensional communication channel</span>
-        </li>
-        
-      </ol>
-      
+      <p class="text-stone-600 leading-relaxed text-[15px] max-w-xl">The most telling sign this quarter wasn&#39;t an attendance number — it was watching community members start hosting their own gatherings without being asked. Post-Shift Drinks went from a managed event to something people claimed as their own. The Innovation Sessions followed the same arc: moving to Thursdays, inviting leadership, team inputs to structure, and doubling attendance shifted to a collaborative ownership over the learning agenda. Senior leadership visits from Yomi, Lola, Dele, and Gillian weren&#39;t just check-ins — each one was a designed experience, and the feedback reflected that. The room&#39;s energy this week is focused and forward-looking — Q2 planning is live, the Evolved Worker curriculum has a shape, and the team knows what&#39;s coming next.</p>
     </section>
 
   </main>
 
+  <!-- ── Download button ────────────────────────────────────────────────────── -->
+  <div class="max-w-2xl mx-auto px-6 pt-10 pb-2 text-center">
+    <button onclick="window.print()"
+      class="text-[11px] font-semibold uppercase tracking-[0.15em] text-teal border border-teal px-4 py-1.5 rounded hover:bg-teal hover:text-white transition-colors">
+      Download Report
+    </button>
+  </div>
+
   <!-- ── Footer ─────────────────────────────────────────────────────────────── -->
-  <footer class="max-w-2xl mx-auto px-6 py-6">
+  <footer class="max-w-2xl mx-auto px-6 py-8">
     <div class="h-px bg-stone-300 mb-4"></div>
-    <div class="flex justify-between text-[10px] uppercase tracking-[0.15em] text-stone-400">
+    <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.15em] text-stone-400">
       <span>Community Pulse · Christina Waterman</span>
-      <span>Mar 16 – 22, 2026</span>
+      <span>Mar 23 – 29, 2026</span>
     </div>
   </footer>
 

@@ -33,35 +33,30 @@ MANUAL_INPUTS = {
     # ── Manual wins override ───────────────────────────────────────────────────
     # Populate this list to bypass Asana and use these as the wins this week.
     # Leave empty ([]) to pull from Asana automatically.
-    "manual_wins": [
-        "Evolved Worker Program: Mapped the full EW curriculum journey and designed the L&D certification pitch with cost framework — GenAI certification is now at 75% adoption across the CoE, with Study Groups launched using certified Algos as peer mentors.",
-        "Algo Community Experience: Moved Innovation Sessions to Thursdays, invited leadership, and increased attendance by 75% — Post-Shift Drinks became self-organizing this quarter, with Algos now hosting independently without facilitation.",
-        "Building the CoE: Selected office design partner at 60% under initial budget and completed handover of IT/office management to FinOps & PeopleOps — including IT FAQ, issues tracker, and vendor accounts.",
-        "External Community & Brand: Engaged at four external events this quarter including the Lovable Hackathon, IDEA Networking Breakfast, XPAT Student Event, and AI Unicorn Factory — membership strategy and application framework for The Evolved is now designed and ready to launch.",
-        "Strategic Partnerships & BD: Developed external community value proposition and began outreach for event partnerships — now looped into the Harmon x Algomarketing partnership with Lisbon execution expected in Q2.",
-    ],
+   "manual_wins": [
+    "Evolved Worker Program: GenAI certification is at 76% adoption across the CoE — Study Groups and Focus Groups are live in early stages, with curriculum and L&D approach drafted as a shared initiative with the Innovation team.",
+    "Algo Community Experience: Moved Innovation Sessions to Thursdays, invited leadership, and increased attendance by 75% — Post-Shift Drinks became self-organizing this quarter, with Algos now hosting independently without facilitation.",
+    "Building the CoE: Selected office design and snack partners at 50-60% under initial budget — IT/office management handover to FinOps & PeopleOps is complete, including IT FAQ, issues tracker, and vendor accounts.",
+    "External Community & Brand: Delivered four external events this quarter — Lovable Hackathon, IDEA Networking Breakfast, XPAT Student Event, and AI Unicorn Factory. External community membership strategy and application framework is drafted and ready to propose.",
+    "Strategic Partnerships & BD: Developed external community value proposition and began outreach for event partnerships — now looped into the Harmon x Algomarketing partnership with Lisbon execution expected in Q2.",
+],
 
     # ── Score inputs ──────────────────────────────────────────────────────────
     # Tasks: Asana pulls completed count automatically; just set how many you planned.
     "tasks_planned": 6,
 
-    # Community-building activities (workshops, calls, campaigns, etc.)
-    "community_activities_executed": 3,
-    "community_activities_planned": 4,
+    # 0–100. Community-facing activities delivered this week (events, activations, sessions).
+    # Will eventually connect to Google Calendar automatically.
+    "community_impact_score": 75,
 
-    # In-scope service requests (support tickets, member requests, etc.)
-    "in_scope_handled": 16,
-    "in_scope_received": 18,
+    # 0–100. 100 = all output was community-strategic. 50 = half strategic, half intentional
+    # closeout or transition work. Never penalizes absorbed requests — measures quality of
+    # output delivered, not what landed in your inbox.
+    "scope_health": 72,
 
-    # Communication posture this week
-    "proactive_actions": 9,   # You initiated: newsletters, check-ins, reports
-    "reactive_actions": 2,    # You responded: unplanned requests, fires
-
-    # Out-of-scope requests received (used for penalty AND Scope Evolution list)
-    "out_of_scope_count": 2,
-
-    # Previous week's score for trend arrow (set to None to hide arrow)
-    "previous_score": 50,
+    # Previous week's score for trend arrow. Set to 0 on the first scored week — hides
+    # the trend arrow and shows "Week 1 baseline" instead.
+    "previous_score": 0,
 
     # One sentence. Sets the tone for the week. Sounds like you, not a template.
    "editors_note": "Q1 was about building something from nothing — the infrastructure is in place, the community is moving on its own, and this is what that looks like.",
@@ -71,22 +66,29 @@ MANUAL_INPUTS = {
     "The most telling sign this quarter wasn't an attendance number — it was watching community members start hosting their own gatherings without being asked. "
     "Post-Shift Drinks went from a managed event to something people claimed as their own. "
     "The Innovation Sessions followed the same arc: moving to Thursdays, inviting leadership, team inputs to structure, and doubling attendance shifted to a collaborative ownership over the learning agenda. "
-"Senior leadership visits from Yomi, Dele, Lola, and Gillian weren't just check-ins — each one was a designed experience, and the feedback reflected that."   
- "The room's energy this week is focused and forward-looking — Q2 planning is live, the Evolved Worker curriculum has a shape, and the team knows what's coming next."
+"Senior leadership visits from Yomi, Lola, Dele, and Gillian weren't just check-ins — each one was a designed experience, and the feedback reflected that. "
+"The room's energy this week is focused and forward-looking — Q2 planning is live, the Evolved Worker curriculum has a shape, and the team knows what's coming next."
 ),
 
-    # Each item becomes a line in "What I Need to Move Faster" — frame as accelerators, not complaints
-    "accelerators": [
-"Formal introduction to the broader Algomarketing organization — visibility gaps are slowing community foundations work",    
-"External community brand identity alignment — sense check on direction will unlock tri-dimensional communication channel",    
+    # Exactly two items, one sentence each. What you need to move faster.
+   "what_i_need": [
+    "A formal introduction to the broader Algomarketing organization — the community work is ready for wider visibility.",
+    "External community brand identity alignment — a direction decision unlocks the next phase of the external community launch.",
+],
+
+    # Links shown under "Weekly Wins & Key Actions" inside "What We Built".
+    # Each entry: {"url": "...", "label": "..."}. Empty list hides the subheader entirely.
+   "links": [
+    {"url": "https://calendar.google.com/calendar/u/0?cid=Y183OTY4NDBiMTA2MzI1NWQzMDBhZDc2NWQ2YWQyMTg1YWYzMWZkMzhkOWNhOWViOTAyMDMzYjVkZTk4Yzg3MTdkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20", "label": "EW Community Calendar"},
+    {"url": "https://drive.google.com/file/d/1kyETRYD1BUvOJ96k45s2heAoZD_q6aQj/view?usp=sharing", "label": "External Community Vision"},
+    {"url": "https://www.linkedin.com/posts/ideaspaces_communitymanager-algomarketing-idea-activity-7439368983029370880-bgZ3", "label": "Strategic Community Partnerships"},
 ],
 
     # Each item becomes a line in Scope Evolution — frame as demand signals
-    "scope_evolution": [
-    "Led full CoE office design from vendor sourcing to partner selection — a facilities and procurement initiative absorbed into community scope as the operational anchor of the CoE launch",
-    "Became the de facto IT coordinator/office manager for the Lisbon team, creating the FAQ, managing the issues tracker strategy, and directing Algos on support protocols — now formally handed over to FinOps & PeopleOps",
-"Looped into the Harmon x Algomarketing PR partnership — supporting the client acquisition events remotely in preparation for leading Lisbon events execution",
-    ],
+   "scope_evolution": [
+    "Absorbed IT coordination and office management for the Lisbon team during CoE setup — fully handed over to FinOps & PeopleOps.",
+    "Looped into the Harmon x Algomarketing PR partnership, with Lisbon events execution expected in Q2.",
+],
 }
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -250,43 +252,26 @@ def fetch_asana_wins(pat: str, project_gids: list[str]) -> list[dict]:
 
 def calculate_score(inputs: dict, tasks_completed: int) -> dict:
     """
-    Community Engagement Score (0–100).
+    Community Pulse Score (0–100).
 
     Components:
-      +30  Task completion rate        (completed / planned)
-      +25  Community activities rate   (executed / planned)
-      +20  In-scope handling rate      (handled / received)
-      +15  Proactive communication     (proactive / total actions)
-      −10  Out-of-scope penalty        (scales with count, max −10)
-
-    Base is normalised to 100, then the penalty is applied.
+      +40  Community Impact   (community_impact_score / 100) * 40
+      +35  Program Delivery   (tasks_completed / tasks_planned) * 35
+      +25  Scope Health       (scope_health / 100) * 25
     """
     p = inputs
     planned = max(p["tasks_planned"], 1)
-    act_planned = max(p["community_activities_planned"], 1)
-    inscope_recv = max(p["in_scope_received"], 1)
-    total_actions = max(p["proactive_actions"] + p["reactive_actions"], 1)
 
-    task_rate       = min(tasks_completed / planned, 1.0)
-    activity_rate   = min(p["community_activities_executed"] / act_planned, 1.0)
-    inscope_rate    = min(p["in_scope_handled"] / inscope_recv, 1.0)
-    proactive_rate  = p["proactive_actions"] / total_actions
+    community_pts = (p["community_impact_score"] / 100) * 40
+    delivery_pts  = min(tasks_completed / planned, 1.0) * 35
+    scope_pts     = (p["scope_health"] / 100) * 25
 
-    base = (
-        task_rate      * 30
-        + activity_rate  * 25
-        + inscope_rate   * 20
-        + proactive_rate * 15
-    )  # max 90
+    score = round(max(0, min(100, community_pts + delivery_pts + scope_pts)))
 
-    # Normalise to 100, then apply out-of-scope penalty (each request = 2 pts, max 10)
-    normalised = (base / 90) * 100
-    penalty = min(10, p["out_of_scope_count"] * 2)
-    score = round(max(0, min(100, normalised - penalty)))
-
-    # Trend vs previous week
     prev = p.get("previous_score")
-    if prev is None:
+    baseline = (prev == 0)
+
+    if baseline or prev is None:
         trend = "neutral"
         delta = None
     elif score > prev:
@@ -303,12 +288,11 @@ def calculate_score(inputs: dict, tasks_completed: int) -> dict:
         "score": score,
         "trend": trend,
         "delta": delta,
+        "baseline": baseline,
         "breakdown": {
-            "task_completion":   round(task_rate * 30, 1),
-            "community_activities": round(activity_rate * 25, 1),
-            "inscope_handling":  round(inscope_rate * 20, 1),
-            "proactive_comms":   round(proactive_rate * 15, 1),
-            "oos_penalty":       -penalty,
+            "community_impact": round(community_pts, 1),
+            "program_delivery": round(delivery_pts, 1),
+            "scope_health":     round(scope_pts, 1),
         },
     }
 
@@ -369,7 +353,10 @@ def main() -> None:
         "culture_pulse": MANUAL_INPUTS["culture_pulse"],
         "scope_evolution": MANUAL_INPUTS["scope_evolution"],
         "editors_note": MANUAL_INPUTS.get("editors_note", ""),
-        "accelerators": MANUAL_INPUTS.get("accelerators", []),
+        "what_i_need": MANUAL_INPUTS.get("what_i_need", []),
+        "links": MANUAL_INPUTS.get("links", []),
+        "retrospective_mode": RETROSPECTIVE_MODE,
+        "retrospective_start": RETROSPECTIVE_START,
         "tasks_completed": len(wins),
         "tasks_planned": MANUAL_INPUTS["tasks_planned"],
     }

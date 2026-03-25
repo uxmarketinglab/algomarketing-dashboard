@@ -42,12 +42,36 @@
 
     <!-- Title + byline -->
     <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-      <h1 class="font-serif text-5xl text-ink leading-none tracking-tight">Community<br/>Pulse</h1>
+      <div>
+        <h1 class="font-serif text-5xl text-ink leading-none tracking-tight">Community<br/>Pulse</h1>
+        <p id="tagline"
+           class="mt-3 text-[10px] font-semibold uppercase tracking-[0.25em] text-teal"
+           style="transition: opacity 0.5s ease;">Built in Lisbon · Q1 2026</p>
+      </div>
       <div class="text-right leading-snug">
         <p class="text-sm font-semibold text-ink">Christina Waterman</p>
         <p class="text-sm text-stone-500">Week of {{ week_label }}</p>
       </div>
     </div>
+    <script>
+      (function () {
+        var phrases = [
+          "Built in Lisbon · Q1 2026",
+          "Algomarketing Centre of Evolution",
+          "Community & Workforce Development"
+        ];
+        var idx = 0;
+        var el = document.getElementById('tagline');
+        setInterval(function () {
+          el.style.opacity = '0';
+          setTimeout(function () {
+            idx = (idx + 1) % phrases.length;
+            el.textContent = phrases[idx];
+            el.style.opacity = '1';
+          }, 500);
+        }, 3000);
+      })();
+    </script>
 
     <!-- Editor's note -->
     {% if editors_note %}
@@ -60,12 +84,12 @@
     <div class="mt-8 h-px bg-stone-300"></div>
   </header>
 
-  <main class="max-w-2xl mx-auto px-6 pb-16 space-y-16">
+  <main class="max-w-2xl mx-auto px-6 pb-20">
 
     <!-- ── Community Engagement Score ───────────────────────────────────────── -->
-    <section class="text-center pt-4">
-      <p class="text-[10px] font-semibold uppercase tracking-[0.25em] text-stone-400 mb-6">
-        Community Engagement Score
+    <section class="text-center py-16">
+      <p class="text-[10px] font-semibold uppercase tracking-[0.25em] text-stone-400 mb-8">
+        Community Pulse Score
       </p>
 
       <!-- The number — magazine cover style -->
@@ -74,7 +98,9 @@
         <div class="pt-5 text-left">
           <span class="text-xl text-stone-300 font-light">/100</span>
           <div class="mt-2">
-            {% if score.trend == 'up' %}
+            {% if score.baseline %}
+            <span class="text-sm text-stone-400">Week 1 baseline</span>
+            {% elif score.trend == 'up' %}
             <span class="text-sm font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">↑ {{ score.delta }} pts</span>
             {% elif score.trend == 'down' %}
             <span class="text-sm font-semibold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-full">↓ {{ score.delta }} pts</span>
@@ -86,93 +112,99 @@
       </div>
 
       <!-- Score breakdown — minimal stat row -->
-      <div class="mt-8 flex flex-wrap justify-center gap-x-5 gap-y-3 text-xs text-stone-400">
-        <span>Tasks &nbsp;<strong class="text-ink font-semibold">{{ score.breakdown.task_completion }}/30</strong></span>
+      <div class="mt-10 flex flex-wrap justify-center gap-x-5 gap-y-3 text-xs text-stone-400">
+        <span>Community Impact &nbsp;<strong class="text-ink font-semibold">{{ score.breakdown.community_impact }}/40</strong></span>
         <span class="text-stone-300">·</span>
-        <span>Activities &nbsp;<strong class="text-ink font-semibold">{{ score.breakdown.community_activities }}/25</strong></span>
+        <span>Program Delivery &nbsp;<strong class="text-ink font-semibold">{{ score.breakdown.program_delivery }}/35</strong></span>
         <span class="text-stone-300">·</span>
-        <span>Focus &nbsp;<strong class="text-ink font-semibold">{{ score.breakdown.inscope_handling }}/20</strong></span>
-        <span class="text-stone-300">·</span>
-        <span>Proactive &nbsp;<strong class="text-ink font-semibold">{{ score.breakdown.proactive_comms }}/15</strong></span>
-        <span class="text-stone-300">·</span>
-        <span class="text-rose-400">Penalty &nbsp;<strong>{{ score.breakdown.oos_penalty }}</strong></span>
+        <span>Strategic Focus &nbsp;<strong class="text-ink font-semibold">{{ score.breakdown.scope_health }}/25</strong></span>
       </div>
 
-      <!-- Task tally, human-language -->
-      <p class="mt-4 text-xs text-stone-400">
-        {{ tasks_completed }} of {{ tasks_planned }} planned tasks completed this week
+      <!-- Score description -->
+      <p class="mt-6 text-xs text-stone-400 max-w-md mx-auto leading-relaxed">
+        A weekly index measuring community impact (events and activations), program delivery (tasks completed), and strategic focus (time spent on what matters most) — tracked over time.
       </p>
     </section>
 
-    <!-- ── What We Built This Week ───────────────────────────────────────────── -->
-    <section>
-      <div class="flex items-baseline gap-3 mb-6">
-        <h2 class="font-serif text-3xl text-ink">What We Built This Week</h2>
+    <!-- ── What We Built ─────────────────────────────────────────────────── -->
+    <section class="border-t border-stone-200 pt-14 pb-4">
+      <div class="flex items-baseline gap-3 mb-2">
+        <h2 class="font-serif text-4xl text-ink">What We Built</h2>
         <div class="h-px flex-1 bg-stone-200 mt-1"></div>
       </div>
+      {% if retrospective_mode %}
+      <p class="text-xs italic text-stone-400 mb-8">Q1 retrospective · pulled from delivery records</p>
+      {% else %}
+      <p class="text-xs italic text-stone-400 mb-8">Pulled from Asana · week of {{ week_label }}</p>
+      {% endif %}
 
       {% if wins %}
-      <ul class="space-y-4">
+      <div class="space-y-5">
         {% for win in wins %}
-        <li class="flex items-start gap-3 text-stone-700 leading-relaxed">
-          <span class="mt-2 w-1.5 h-1.5 rounded-full bg-teal flex-shrink-0"></span>
-          <span>{{ win }}</span>
-        </li>
+        {% set parts = win.split(': ', 1) %}
+        <div class="pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
+          {% if parts|length > 1 %}
+          <h3 class="font-serif text-2xl text-teal leading-tight mb-2">{{ parts[0] }}</h3>
+          <p class="text-stone-600 leading-relaxed text-[15px]">{{ parts[1] }}</p>
+          {% else %}
+          <p class="text-stone-600 leading-relaxed text-[15px]">{{ win }}</p>
+          {% endif %}
+        </div>
         {% endfor %}
-      </ul>
+      </div>
       {% else %}
       <p class="text-stone-400 italic text-sm">
         Connect Asana to pull completed tasks automatically — add credentials to your <code class="font-mono text-xs">.env</code> file.
       </p>
       {% endif %}
-    </section>
 
-    <!-- ── The Room's Energy ────────────────────────────────────────────────── -->
-    <section>
-      <div class="flex items-baseline gap-3 mb-6">
-        <h2 class="font-serif text-3xl text-ink">The Room's Energy</h2>
-        <div class="h-px flex-1 bg-stone-200 mt-1"></div>
+      <!-- Weekly Wins & Key Actions -->
+      {% if links %}
+      <div class="mt-12">
+        <div class="flex items-baseline gap-3 mb-4">
+          <h3 class="font-serif text-3xl text-ink">Weekly Wins &amp; Key Actions</h3>
+          <div class="h-px flex-1 bg-stone-200 mt-1"></div>
+        </div>
+        <ul class="space-y-2">
+          {% for link in links %}
+          <li>
+            <a href="{{ link.url }}" target="_blank" rel="noopener"
+               class="text-teal font-medium hover:underline text-[15px]">→ {{ link.label }}</a>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
+      {% endif %}
 
-      <p class="text-stone-700 leading-relaxed text-base max-w-xl">{{ culture_pulse }}</p>
-    </section>
-
-    <!-- ── Where I'm Being Pulled ────────────────────────────────────────────── -->
-    <section>
-      <div class="flex items-baseline gap-3 mb-2">
-        <h2 class="font-serif text-3xl text-ink">Scope Evolution</h2>
-        <div class="h-px flex-1 bg-stone-200 mt-1"></div>
-      </div>
-      <p class="text-[10px] uppercase tracking-[0.2em] text-stone-400 mb-7">Opportunity signals · expanding influence</p>
-
+      <!-- Expanding Influence -->
       {% if scope_evolution %}
-      <ol class="space-y-5">
-        {% for item in scope_evolution %}
-        <li class="flex items-start gap-5">
-          <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">{{ loop.index }}</span>
-          <span class="text-stone-700 leading-relaxed">{{ item }}</span>
-        </li>
-        {% endfor %}
-      </ol>
-      {% else %}
-      <p class="text-stone-400 italic text-sm">None this week.</p>
+      <div class="mt-14">
+        <p class="text-[10px] uppercase tracking-[0.2em] text-stone-400 mb-6">Expanding Influence</p>
+        <ol class="space-y-5">
+          {% for item in scope_evolution %}
+          <li class="flex items-start gap-5">
+            <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">{{ loop.index }}</span>
+            <span class="text-stone-600 leading-relaxed text-[15px]">{{ item }}</span>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
       {% endif %}
     </section>
 
-    <!-- ── What I Need to Move Faster ──────────────────────────────────────── -->
-    <section>
-      <div class="flex items-baseline gap-3 mb-2">
-        <h2 class="font-serif text-3xl text-ink">What I Need to Move Faster</h2>
+    <!-- ── What I Need ───────────────────────────────────────────────────── -->
+    <section class="border-t border-stone-200 pt-14 pb-4 mt-14">
+      <div class="flex items-baseline gap-3 mb-8">
+        <h2 class="font-serif text-4xl text-ink">What I Need</h2>
         <div class="h-px flex-1 bg-stone-200 mt-1"></div>
       </div>
-      <p class="text-[10px] uppercase tracking-[0.2em] text-stone-400 mb-7">Resolved, these accelerate everything</p>
 
-      {% if accelerators %}
+      {% if what_i_need %}
       <ol class="space-y-5">
-        {% for item in accelerators %}
+        {% for item in what_i_need %}
         <li class="flex items-start gap-5">
           <span class="font-serif text-teal text-xl leading-tight w-5 flex-shrink-0 select-none">{{ loop.index }}</span>
-          <span class="text-stone-700 leading-relaxed">{{ item }}</span>
+          <span class="text-stone-600 leading-relaxed text-[15px]">{{ item }}</span>
         </li>
         {% endfor %}
       </ol>
@@ -181,12 +213,30 @@
       {% endif %}
     </section>
 
+    <!-- ── The Room's Energy ────────────────────────────────────────────────── -->
+    <section class="border-t border-stone-200 pt-14 mt-14">
+      <div class="flex items-baseline gap-3 mb-6">
+        <h2 class="font-serif text-4xl text-ink">The Room's Energy</h2>
+        <div class="h-px flex-1 bg-stone-200 mt-1"></div>
+      </div>
+
+      <p class="text-stone-600 leading-relaxed text-[15px] max-w-xl">{{ culture_pulse }}</p>
+    </section>
+
   </main>
 
+  <!-- ── Download button ────────────────────────────────────────────────────── -->
+  <div class="max-w-2xl mx-auto px-6 pt-10 pb-2 text-center">
+    <button onclick="window.print()"
+      class="text-[11px] font-semibold uppercase tracking-[0.15em] text-teal border border-teal px-4 py-1.5 rounded hover:bg-teal hover:text-white transition-colors">
+      Download Report
+    </button>
+  </div>
+
   <!-- ── Footer ─────────────────────────────────────────────────────────────── -->
-  <footer class="max-w-2xl mx-auto px-6 py-6">
+  <footer class="max-w-2xl mx-auto px-6 py-8">
     <div class="h-px bg-stone-300 mb-4"></div>
-    <div class="flex justify-between text-[10px] uppercase tracking-[0.15em] text-stone-400">
+    <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.15em] text-stone-400">
       <span>Community Pulse · Christina Waterman</span>
       <span>{{ week_label }}</span>
     </div>
