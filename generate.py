@@ -34,7 +34,7 @@ MANUAL_INPUTS = {
     # Populate this list to bypass Asana and use these as the wins this week.
     # Leave empty ([]) to pull from Asana automatically.
    "manual_wins": [
-    "Evolved Worker Program: GenAI certification is at 76% adoption across the CoE — Study Groups and Focus Groups are live in early stages, with curriculum and L&D approach drafted as a shared initiative with the Innovation team.",
+    "Evolved Worker Program: GenAI certification reached 100% adoption across the CoE — every team member has attempted the exam, with 76% fully certified. Study Groups and Focus Groups are live in early stages, with curriculum and L&D approach drafted as a shared initiative with the Innovation team.",
     "Algo Community Experience: Moved Innovation Sessions to Thursdays, invited leadership, and increased attendance by 75% — Post-Shift Drinks became self-organizing this quarter, with Algos now hosting independently without facilitation.",
     "Building the CoE: Selected office design and snack partners at 50-60% under initial budget — IT/office management handover to FinOps & PeopleOps is complete, including IT FAQ, issues tracker, and vendor accounts.",
     "External Community & Brand: Delivered four external events this quarter — Lovable Hackathon, IDEA Networking Breakfast, XPAT Student Event, and AI Unicorn Factory. External community membership strategy and application framework is drafted and ready to propose.",
