@@ -30,16 +30,20 @@ ASSIGNEE_FILTER = "Christina"
 
 # ── Manual inputs — edit these each week ─────────────────────────────────────
 MANUAL_INPUTS = {
+    # ── Week label override ────────────────────────────────────────────────────
+    # Set explicitly to override the auto-computed Mon–Sun label.
+    "week_label": "Mar 20 – Apr 3, 2026",
+
     # ── Manual wins override ───────────────────────────────────────────────────
     # Populate this list to bypass Asana and use these as the wins this week.
     # Leave empty ([]) to pull from Asana automatically.
-   "manual_wins": [
-    "Evolved Worker Program: GenAI certification reached 100% adoption across the CoE — every team member has attempted the exam, with 76% fully certified. Study Groups and Focus Groups are live in early stages, with curriculum and L&D approach drafted as a shared initiative with the Innovation team.",
-    "Algo Community Experience: Moved Innovation Sessions to Thursdays, invited leadership, and increased attendance by 75% — Post-Shift Drinks became self-organizing this quarter, with Algos now hosting independently without facilitation.",
-    "Building the CoE: Selected office design and snack partners at 50-60% under initial budget — IT/office management handover to FinOps & PeopleOps is complete, including IT FAQ, issues tracker, and vendor accounts.",
-    "External Community & Brand: Delivered four external events this quarter — Lovable Hackathon, IDEA Networking Breakfast, XPAT Student Event, and AI Unicorn Factory. External community membership strategy and application framework is drafted and ready to propose.",
-    "Strategic Partnerships & BD: Developed external community value proposition and began outreach for event partnerships — now looped into the Harmon x Algomarketing partnership with Lisbon execution expected in Q2.",
-],
+    "manual_wins": [
+        "Evolved Worker Program: GenAI certification reached 100% adoption across the CoE — every team member has attempted the exam, with 76% fully certified. Guest hosted the Innovation Session this week, with Luke and Beatriz now briefed on the three golden rules for engagement. Innovation Afternoons are live as a dedicated weekly format.",
+        "Algo Community Experience: 7 community touchpoints delivered across two weeks — nearly double the Q1 weekly cadence. Community members are now bringing their own engagement ideas unprompted, a signal the culture is self-generating.",
+        "Building the CoE: In the home stretch on office infrastructure — 200 additional meeting room credits secured through end of growth planning period, and full vendor and office management handover to Eliana is complete.",
+        "External Community & Brand: External community strategy is moving forward — alumni community framework and AI Enabler talent pipeline are in active planning. Recruitment event development is underway.",
+        "Strategic Partnerships & BD: QBR delivered end-to-end including logistics, gifts, and client experience. Press photoshoot booked and in preparation — mood board, photographer briefed, Yomi visuals in progress.",
+    ],
 
     # ── Score inputs ──────────────────────────────────────────────────────────
     # Tasks: Asana pulls completed count automatically; just set how many you planned.
@@ -47,48 +51,42 @@ MANUAL_INPUTS = {
 
     # 0–100. Community-facing activities delivered this week (events, activations, sessions).
     # Will eventually connect to Google Calendar automatically.
-    "community_impact_score": 75,
+    "community_impact_score": 88,
 
     # 0–100. 100 = all output was community-strategic. 50 = half strategic, half intentional
     # closeout or transition work. Never penalizes absorbed requests — measures quality of
     # output delivered, not what landed in your inbox.
-    "scope_health": 72,
+    "scope_health": 60,
 
     # Previous week's score for trend arrow. Set to 0 on the first scored week — hides
     # the trend arrow and shows "Week 1 baseline" instead.
-    "previous_score": 0,
+    "previous_score": 77,
 
     # One sentence. Sets the tone for the week. Sounds like you, not a template.
-   "editors_note": "Q1 was about building something from nothing — the infrastructure is in place, the community is moving on its own, and this is what that looks like.",
+    "editors_note": "The focus is moving from building the CoE to activating beyond it — internal engagement is established, office infrastructure is handed over, and Q2 is about bringing the outside in.",
 
     # ── Narrative content ─────────────────────────────────────────────────────
-    "culture_pulse": (
-    "The most telling sign this quarter wasn't an attendance number — it was watching community members start hosting their own gatherings without being asked. "
-    "Post-Shift Drinks went from a managed event to something people claimed as their own. "
-    "The Innovation Sessions followed the same arc: moving to Thursdays, inviting leadership, team inputs to structure, and doubling attendance shifted to a collaborative ownership over the learning agenda. "
-"Senior leadership visits from Yomi, Lola, Dele, and Gillian weren't just check-ins — each one was a designed experience, and the feedback reflected that. "
-"The room's energy this week is focused and forward-looking — Q2 planning is live, the Evolved Worker curriculum has a shape, and the team knows what's coming next."
-),
+    "culture_pulse": "The room is settling into its own rhythm. Spring brought a shift in energy — the EM transition closed quietly, the community absorbed it without missing a beat, and members are now bringing their own ideas to the table without being asked. QBR week tested the full range of the role and held. Going into Q2, the foundation is solid and the focus is moving outward.",
 
     # Exactly two items, one sentence each. What you need to move faster.
-   "what_i_need": [
-    "A formal introduction to the broader Algomarketing organization — the community work is ready for wider visibility.",
-    "External community brand identity alignment — a direction decision unlocks the next phase of the external community launch.",
-],
+    "what_i_need": [
+        "A 1-hour working session on the community roadmap — ready to present, need your input to finalize Q2 direction.",
+        "Early procurement conversations for the May floor expansion — validating the concept unlocks the timeline.",
+    ],
 
     # Links shown under "Weekly Wins & Key Actions" inside "What We Built".
     # Each entry: {"url": "...", "label": "..."}. Empty list hides the subheader entirely.
-   "links": [
-    {"url": "https://calendar.google.com/calendar/u/0?cid=Y183OTY4NDBiMTA2MzI1NWQzMDBhZDc2NWQ2YWQyMTg1YWYzMWZkMzhkOWNhOWViOTAyMDMzYjVkZTk4Yzg3MTdkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20", "label": "EW Community Calendar"},
-    {"url": "https://drive.google.com/file/d/1kyETRYD1BUvOJ96k45s2heAoZD_q6aQj/view?usp=sharing", "label": "External Community Vision"},
-    {"url": "https://www.linkedin.com/posts/ideaspaces_communitymanager-algomarketing-idea-activity-7439368983029370880-bgZ3", "label": "Strategic Community Partnerships"},
-],
+    "links": [
+        {"url": "https://calendar.google.com/calendar/u/0?cid=Y183OTY4NDBiMTA2MzI1NWQzMDBhZDc2NWQ2YWQyMTg1YWYzMWZkMzhkOWNhOWViOTAyMDMzYjVkZTk4Yzg3MTdkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20", "label": "EW Community Calendar"},
+        {"url": "https://drive.google.com/file/d/1kyETRYD1BUvOJ96k45s2heAoZD_q6aQj/view?usp=sharing", "label": "External Community Vision"},
+        {"url": "https://www.linkedin.com/posts/ideaspaces_communitymanager-algomarketing-idea-activity-7439368983029370880-bgZ3", "label": "Strategic Community Partnerships"},
+    ],
 
     # Each item becomes a line in Scope Evolution — frame as demand signals
-   "scope_evolution": [
-    "Absorbed IT coordination and office management for the Lisbon team during CoE setup — fully handed over to FinOps & PeopleOps.",
-    "Looped into the Harmon x Algomarketing PR partnership, with Lisbon events execution expected in Q2.",
-],
+    "scope_evolution": [
+        "Rockstaar collaboration underway — shaping the Evolved Worker tone of voice and talent brand positioning alongside the marketing team.",
+        "AI Enabler service line launching — integrating alumni community and contractor talent pipeline into the community roadmap.",
+    ],
 }
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -343,7 +341,7 @@ def main() -> None:
     today = datetime.now()
     monday = today - timedelta(days=today.weekday())
     sunday = monday + timedelta(days=6)
-    week_label = f"{monday.strftime('%b %-d')} – {sunday.strftime('%-d, %Y')}"
+    week_label = MANUAL_INPUTS.get("week_label") or f"{monday.strftime('%b %-d')} – {sunday.strftime('%-d, %Y')}"
 
     context = {
         "week_label": week_label,
