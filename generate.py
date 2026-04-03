@@ -70,7 +70,7 @@ MANUAL_INPUTS = {
 
     # Exactly two items, one sentence each. What you need to move faster.
     "what_i_need": [
-        "A 1-hour working session on the community roadmap — ready to present, need your input to finalize direction.",
+        "A 1-hour working session on the community roadmap after Wednesday delivery",
         "Begin procurement conversations for the targeted floor expansion and headcount growth.",
     ],
 
