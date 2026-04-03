@@ -32,7 +32,7 @@ ASSIGNEE_FILTER = "Christina"
 MANUAL_INPUTS = {
     # ── Week label override ────────────────────────────────────────────────────
     # Set explicitly to override the auto-computed Mon–Sun label.
-    "week_label": "Mar 20 – Apr 3, 2026",
+    "week_label": "Mar 30 – Apr 3, 2026",
 
     # ── Manual wins override ───────────────────────────────────────────────────
     # Populate this list to bypass Asana and use these as the wins this week.
@@ -77,9 +77,8 @@ MANUAL_INPUTS = {
     # Links shown under "Weekly Wins & Key Actions" inside "What We Built".
     # Each entry: {"url": "...", "label": "..."}. Empty list hides the subheader entirely.
     "links": [
-        {"url": "https://calendar.google.com/calendar/u/0?cid=Y183OTY4NDBiMTA2MzI1NWQzMDBhZDc2NWQ2YWQyMTg1YWYzMWZkMzhkOWNhOWViOTAyMDMzYjVkZTk4Yzg3MTdkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20", "label": "EW Community Calendar"},
-        {"url": "https://drive.google.com/file/d/1kyETRYD1BUvOJ96k45s2heAoZD_q6aQj/view?usp=sharing", "label": "External Community Vision"},
-        {"url": "https://www.linkedin.com/posts/ideaspaces_communitymanager-algomarketing-idea-activity-7439368983029370880-bgZ3", "label": "Strategic Community Partnerships"},
+        {"url": "https://drive.google.com/file/d/1Y_8yY9GPmRb4Xy-t7zubVfXaLl6B72yB/view", "label": "Innovation session demos recap"},
+        {"url": "https://docs.google.com/document/d/14Q1sUxh5CzZfUvklXFoGtFbXklxObLCVPLBbWadDPEc/edit?tab=t.0#heading=h.q3tyna3tyuga", "label": "First recruiting event brief complete"},
     ],
 
     # Each item becomes a line in Scope Evolution — frame as demand signals
