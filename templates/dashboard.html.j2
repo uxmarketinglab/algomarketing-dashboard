@@ -132,11 +132,7 @@
         <h2 class="font-serif text-4xl text-ink">What We Built</h2>
         <div class="h-px flex-1 bg-stone-200 mt-1"></div>
       </div>
-      {% if retrospective_mode %}
-      <p class="text-xs italic text-stone-400 mb-8">Q1 retrospective · pulled from delivery records</p>
-      {% else %}
-      <p class="text-xs italic text-stone-400 mb-8">Pulled from Asana · week of {{ week_label }}</p>
-      {% endif %}
+      <p class="text-xs italic text-stone-400 mb-8">Week of {{ week_label }}</p>
 
       {% if wins %}
       <div class="space-y-5">

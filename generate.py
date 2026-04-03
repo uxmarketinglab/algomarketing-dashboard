@@ -21,7 +21,7 @@ load_dotenv()
 # ── Config ────────────────────────────────────────────────────────────────────
 # Set to True to pull tasks from RETROSPECTIVE_START through today instead of
 # just the current week. Switch back to False for normal weekly runs.
-RETROSPECTIVE_MODE  = True
+RETROSPECTIVE_MODE  = False
 RETROSPECTIVE_START = "2026-03-01"  # ISO date, inclusive
 
 # Only tasks assigned to someone whose name contains this string will appear.
