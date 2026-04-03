@@ -38,7 +38,7 @@ MANUAL_INPUTS = {
     # Populate this list to bypass Asana and use these as the wins this week.
     # Leave empty ([]) to pull from Asana automatically.
     "manual_wins": [
-        "Evolved Worker Program: GenAI certification reached 100% adoption across the CoE — every team member has attempted the exam, with 76% fully certified. Guest hosted the Innovation Session this week, with Luke and Beatriz now briefed on the three golden rules for engagement. Innovation Afternoons are live as a dedicated weekly format.",
+        "Evolved Worker Program: GenAI certification reached 82% fully certified (76% including Core) in Q1. Guest hosted the Innovation Session this week, with Luke and Beatriz now briefed on the three golden rules for engagement. Innovation Afternoons are live as a dedicated weekly format.",
         "Algo Community Experience: 7 community touchpoints delivered across two weeks — nearly double the Q1 weekly cadence. Community members are now bringing their own engagement ideas unprompted, a signal the culture is self-generating.",
         "Building the CoE: In the home stretch on office infrastructure — 200 additional meeting room credits secured through end of growth planning period, and full vendor and office management handover to Eliana is complete.",
         "External Community & Brand: External community strategy is moving forward — alumni community framework and AI Enabler talent pipeline are in active planning. Recruitment event development is underway.",
@@ -70,8 +70,8 @@ MANUAL_INPUTS = {
 
     # Exactly two items, one sentence each. What you need to move faster.
     "what_i_need": [
-        "A 1-hour working session on the community roadmap — ready to present, need your input to finalize Q2 direction.",
-        "Early procurement conversations for the May floor expansion — validating the concept unlocks the timeline.",
+        "A 1-hour working session on the community roadmap — ready to present, need your input to finalize direction.",
+        "Begin procurement conversations for the targeted floor expansion and headcount growth.",
     ],
 
     # Links shown under "Weekly Wins & Key Actions" inside "What We Built".
