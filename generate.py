@@ -37,7 +37,13 @@ MANUAL_INPUTS = {
     # ── Manual wins override ───────────────────────────────────────────────────
     # Populate this list to bypass Asana and use these as the wins this week.
     # Leave empty ([]) to pull from Asana automatically.
-    "manual_wins": [],
+    "manual_wins": [
+        "Community Roadmap: Delivered the full 2026 community strategy roadmap covering all segments, alumni criteria, and engagement plan — shared with Lola, review session scheduled for Monday.",
+        "QBR Delivery: Executed the client QBR end-to-end — logistics, gifting, and client experience all ran smoothly. A DHL supply chain issue was pivoted in real time with a local champagne toast that landed well with the partner and the room.",
+        "Office Design: Soft validation secured from Yomi on the Studio D two-zone concept — focused work zone and creative/innovation space with terrace views moving forward.",
+        "CoreSync Presentation: Prepared notes for the CoreSync presentation — ready for when the meeting is rescheduled.",
+        "Asana Migration: Completed board cleanup following the EM transition — legacy tasks flagged and organized for Lola review.",
+    ],
 
     # ── Score inputs ──────────────────────────────────────────────────────────
     # Tasks: Asana pulls completed count automatically; just set how many you planned.
@@ -71,8 +77,8 @@ MANUAL_INPUTS = {
     # Links shown under "Weekly Wins & Key Actions" inside "What We Built".
     # Each entry: {"url": "...", "label": "..."}. Empty list hides the subheader entirely.
     "links": [
-        {"url": "https://drive.google.com/file/d/1Y_8yY9GPmRb4Xy-t7zubVfXaLl6B72yB/view", "label": "Innovation session demos recap"},
-        {"url": "https://docs.google.com/document/d/14Q1sUxh5CzZfUvklXFoGtFbXklxObLCVPLBbWadDPEc/edit?tab=t.0#heading=h.q3tyna3tyuga", "label": "First recruiting event brief complete"},
+        {"url": "https://app.asana.com/1/1204309477846342/project/1212909024041187/list/1213985937025315", "label": "EM Transition — Outstanding Tasks for Review"},
+        {"url": "https://drive.google.com/drive/u/0/folders/1EMOQCF5qsqMHrHOCkcEQHO-AMrwx7N4H", "label": "QBR Day — Content & Photos (professional photos coming soon)"},
     ],
 
     # Each item becomes a line in Scope Evolution — frame as demand signals
