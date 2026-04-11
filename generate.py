@@ -24,53 +24,54 @@ RETROSPECTIVE_START = "2026-03-01"
 # ── Manual inputs — edit these each week ─────────────────────────────────────
 MANUAL_INPUTS = {
     # ── Week label ────────────────────────────────────────────────────────────
-    "week_label": "Apr 14 – 18, 2026",
+    "week_label": "Apr 6 – 10, 2026",
 
     # ── Wins — paste Gemini-refined Asana AI output here each week ────────────
     # Each string is one initiative: "Initiative Name: One sentence summary."
     "manual_wins": [
-        "Evolved Worker Program: GenAI certification reached 100% adoption across the CoE — every team member has attempted the exam, with 76% fully certified.",
-        "Algo Community Experience: 7 community touchpoints delivered across two weeks — nearly double the Q1 weekly cadence, with members now bringing their own engagement ideas unprompted.",
-        "Building the CoE: Office infrastructure handover to Eliana complete — 200 additional meeting room credits secured through end of growth planning period.",
-        "External Community & Brand: External community strategy moving forward — alumni community framework and AI Enabler talent pipeline in active planning.",
-        "Strategic Partnerships & BD: QBR delivered end-to-end — logistics, gifting, and client experience all ran smoothly.",
+        "Community Roadmap: Delivered the full 2026 community strategy roadmap covering all segments, alumni criteria, and engagement plan — shared with Lola, review session scheduled for Monday.",
+        "QBR Delivery: Executed the client QBR end-to-end — logistics, gifting, and client experience all ran smoothly. A DHL supply chain issue was pivoted in real time with a local champagne toast that landed well with the partner and the room.",
+        "Office Design: Soft validation secured from Yomi on the Studio D two-zone concept — focused work zone and creative/innovation space with terrace views moving forward.",
+        "CoreSync Presentation: Prepared notes for the CoreSync presentation — ready for when the meeting is rescheduled.",
+        "Asana Migration: Completed board cleanup following the EM transition — legacy tasks flagged and organized for Lola review.",
     ],
 
     # ── Score inputs ──────────────────────────────────────────────────────────
-    # How many tasks did you plan this week
-    "tasks_planned": 6,
+    # How many initiatives/tasks you planned this week
+    "tasks_planned": 5,
 
     # 0–100. Community-facing activities delivered this week.
     # From Gemini Prompt 3.
-    "community_impact_score": 80,
+    "community_impact_score": 92,
 
     # 0–100. 100 = all output was community-strategic.
     # 50 = half strategic, half operational. From Gemini Prompt 3.
-    "scope_health": 70,
+    "scope_health": 55,
 
     # Last week's published score. Set to 0 on first week.
-    "previous_score": 80,
+    "previous_score": 79,
 
     # ── Narrative content — from Gemini Prompt 3 ──────────────────────────────
-    "editors_note": "Update this each week — one sentence, your voice, sets the tone.",
+    "editors_note": "The roadmap is delivered, the QBR was a success, and the office design has Yomi's concept approval — we start fresh on Monday with a full agenda and a team that showed up for the big moment.",
 
-    "culture_pulse": "Update this each week — 2-3 sentences on community energy and intangible wins.",
+    "culture_pulse": "The QBR day became something more than a client event. From the luncheon to the press photoshoot, almost the entire team participated — and what started as a scheduled shoot turned into an impromptu innovation session. Going into Q2, the foundation is solid, the community roadmap is in review, and the team is ready to move from building to showcasing.",
 
     # Exactly two items, one sentence each.
     "what_i_need": [
-        "First item — what would most accelerate your impact right now.",
-        "Second item — direct, no softening.",
+        "Asana board review — flagged legacy EM tasks need your input to close or reassign for Q2 clarity.",
+        "Monday roadmap session scheduled — ready to align on Q2 priorities and community segment sequencing.",
     ],
 
     # Up to 3 expanding influence signals.
     "scope_evolution": [
-        "First signal — framed as opportunity, not complaint.",
-        "Second signal — factual and forward-looking.",
+        "AI Enabler service line launching — integrating alumni community into the community roadmap.",
+        "Heavy CS event production support this week for QBR week — Lola is looped in and aware.",
     ],
 
     # Links for Weekly Wins & Key Actions. Empty list hides the section.
     "links": [
-        {"url": "https://uxmarketinglab.github.io/algomarketing-dashboard/", "label": "Live Dashboard"},
+        {"url": "https://app.asana.com/1/1204309477846342/project/1212909024041187/list/1213985937025315", "label": "EM Transition — Outstanding Tasks for Review"},
+        {"url": "https://drive.google.com/drive/u/0/folders/1EMOQCF5qsqMHrHOCkcEQHO-AMrwx7N4H", "label": "QBR Day — Video & Photo Content (professional photos coming soon)"},
     ],
 }
 # ─────────────────────────────────────────────────────────────────────────────
