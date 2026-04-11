@@ -38,7 +38,7 @@ MANUAL_INPUTS = {
 
     # ── Score inputs ──────────────────────────────────────────────────────────
     # How many initiatives/tasks you planned this week
-    "tasks_planned": 5,
+    "tasks_planned": 6,
 
     # 0–100. Community-facing activities delivered this week.
     # From Gemini Prompt 3.
