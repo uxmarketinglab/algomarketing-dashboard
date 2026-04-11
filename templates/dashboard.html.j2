@@ -135,13 +135,24 @@
       {% if wins %}
       <div class="space-y-5">
         {% for win in wins %}
-        {% set parts = win.split(': ', 1) %}
         <div class="pb-5 border-b border-stone-100 last:border-b-0 last:pb-0">
-          {% if parts|length > 1 %}
-          <h3 class="font-serif text-2xl text-teal leading-tight mb-2">{{ parts[0] }}</h3>
-          <p class="text-stone-600 leading-relaxed text-[15px]">{{ parts[1] }}</p>
+          {% if win is mapping %}
+            {# Structured win from Claude editorial layer: {initiative, summary} #}
+            {% if win.initiative %}
+            <h3 class="font-serif text-2xl text-teal leading-tight mb-2">{{ win.initiative }}</h3>
+            <p class="text-stone-600 leading-relaxed text-[15px]">{{ win.summary }}</p>
+            {% else %}
+            <p class="text-stone-600 leading-relaxed text-[15px]">{{ win.summary }}</p>
+            {% endif %}
           {% else %}
-          <p class="text-stone-600 leading-relaxed text-[15px]">{{ win }}</p>
+            {# Plain string win: split on ': ' to separate initiative from body #}
+            {% set parts = win.split(': ', 1) %}
+            {% if parts|length > 1 %}
+            <h3 class="font-serif text-2xl text-teal leading-tight mb-2">{{ parts[0] }}</h3>
+            <p class="text-stone-600 leading-relaxed text-[15px]">{{ parts[1] }}</p>
+            {% else %}
+            <p class="text-stone-600 leading-relaxed text-[15px]">{{ win }}</p>
+            {% endif %}
           {% endif %}
         </div>
         {% endfor %}
