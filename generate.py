@@ -24,54 +24,55 @@ RETROSPECTIVE_START = "2026-03-01"
 # ── Manual inputs — edit these each week ─────────────────────────────────────
 MANUAL_INPUTS = {
     # ── Week label ────────────────────────────────────────────────────────────
-    "week_label": "Apr 6 – 10, 2026",
+     "week_label": "Apr 11 – 17, 2026",
 
     # ── Wins — paste Gemini-refined Asana AI output here each week ────────────
     # Each string is one initiative: "Initiative Name: One sentence summary."
     "manual_wins": [
-        "Community Roadmap: Delivered the full 2026 community strategy roadmap covering all segments, alumni criteria, and engagement plan — shared with Lola, review session scheduled for Monday.",
-        "QBR Delivery: Executed the client QBR end-to-end — logistics, gifting, and client experience all ran smoothly. A DHL supply chain issue was pivoted in real time with a local champagne toast that landed well with the partner and the room.",
-        "Office Design: Soft validation secured from Yomi on the Studio D two-zone concept — focused work zone and creative/innovation space with terrace views moving forward.",
-        "CoreSync Presentation: Prepared notes for the CoreSync presentation — ready for when the meeting is rescheduled.",
-        "Asana Migration: Completed board cleanup following the EM transition — legacy tasks flagged and organized for Lola review.",
+        "Evolved Worker Program: Expanded the GenAI certification strategy to T3 — all Algos worldwide — and built an n8n automation workflow to support the rollout.",
+        "Algo Community Experience: CoE All-Hands delivered Q1 results to senior leadership — 82% GenAI certification rate inside CoE, with Core CoE booked in before 28th of April. Office expansion is cleared on the IDEA Spaces side, awaiting internal decision on our side.",
+        "External Community & Brand: Recruiting event live on Luma with 10 RSVPs in the first week — 60/40 split between Algos and external community members. Invite-only format with waitlist in place.",
+        "Strategic Partnerships & BD: Bespokely gifting program briefed on the Evolved Worker philosophy — proposal with pricing expected by Wednesday. Potential community partnership on the horizon with Web Summit as a north star/tentpole.",
     ],
+
 
     # ── Score inputs ──────────────────────────────────────────────────────────
     # How many initiatives/tasks you planned this week
-    "tasks_planned": 6,
+    "tasks_planned": 4,
 
     # 0–100. Community-facing activities delivered this week.
     # From Gemini Prompt 3.
-    "community_impact_score": 92,
+    "community_impact_score": 75,
 
     # 0–100. 100 = all output was community-strategic.
     # 50 = half strategic, half operational. From Gemini Prompt 3.
-    "scope_health": 55,
+    "scope_health": 75,
 
     # Last week's published score. Set to 0 on first week.
-    "previous_score": 79,
+    "previous_score": 80,
 
     # ── Narrative content — from Gemini Prompt 3 ──────────────────────────────
-    "editors_note": "The roadmap is delivered, the QBR was a success, and the office design has Yomi's concept approval — we start fresh on Monday with a full agenda and a team that showed up for the big moment.",
+    "editors_note": "The gap between vision and execution is closing — this week felt like proof.",
 
-    "culture_pulse": "The QBR day became something more than a client event. From the luncheon to the press photoshoot, almost the entire team participated — and what started as a scheduled shoot turned into an impromptu innovation session. Going into Q2, the foundation is solid, the community roadmap is in review, and the team is ready to move from building to showcasing.",
+    "culture_pulse": "This was a seed-planting week — less visible than QBR week but arguably more important. The GenAI impact is expanding beyond the CoE. The recruiting event already has external community members on the waitlist. A lot of conversation, relationship-building, and future-planning this week — including an early-stage partnership that's worth a dedicated conversation next week.",
 
     # Exactly two items, one sentence each.
-    "what_i_need": [
-        "Asana board review — flagged legacy EM tasks need your input to close or reassign for Q2 clarity.",
-        "Monday roadmap session scheduled — ready to align on Q2 priorities and community segment sequencing.",
+   "what_i_need": [
+        "Office expansion decision needed urgently — IDEA Spaces is holding the space now and will start showing it to others if we don't confirm this ASAP.",
+        "Continued conversation on community roadmap/vision and next steps for activation as a part of our Monday sync",
     ],
 
     # Up to 3 expanding influence signals.
     "scope_evolution": [
-        "AI Enabler service line launching — integrating alumni community into the community roadmap.",
-        "Heavy CS event production support this week for QBR week — Lola is looped in and aware.",
+        "Monthly digest initiative requires careful coordination with the CS team — audience and content overlap with Shamai's existing Evolved Worker newsletter.",
+        "Innovation support challenges — Luke's focus has shifted primarily to vendors, creating a resource constraint for weekly sessions and future hackathons.",
     ],
 
     # Links for Weekly Wins & Key Actions. Empty list hides the section.
     "links": [
+        {"url": "https://luma.com/5jywjh6u", "label": "Recruiting Event RSVP live on Luma and Linkedin"},
+        {"url": "https://n8n.algomarketing.com/workflow/YvmaivrbtiG6wwFQ", "label": "Created an N8N workflow to automate GenAI Certification offering to wider team"},
         {"url": "https://app.asana.com/1/1204309477846342/project/1212909024041187/list/1213985937025315", "label": "EM Transition — Outstanding Tasks for Review"},
-        {"url": "https://drive.google.com/drive/u/0/folders/1EMOQCF5qsqMHrHOCkcEQHO-AMrwx7N4H", "label": "QBR Day — Video & Photo Content (professional photos coming soon)"},
     ],
 }
 # ─────────────────────────────────────────────────────────────────────────────
